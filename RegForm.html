@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script type="text/javascript">
+        function myfunction(){
+            if (/^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,}/.test(document.getElementById("email").value)){
+                alert("Form submitted!!"+document.getElementById("fname").value);
+            }       
+        }        
+        </script>
+        <style>
+            .border{
+                border-style: double;
+                border-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myForm" class="border" >
+            <label>FirstName: </label><input type="text" id="fname" required/><br/>
+            <label>LastName: </label><input type="text" id="lname" required/><br/>
+            <label>Sex: 
+                <input type="radio" name="sex" value="Male"/>Male
+                <input type="radio" name="sex" value="Female" />Female</label><br/>
+            <label>DOB: </label><input type="date" id="date"  required/><br/>
+            <label>Address: </label><input type="text" id="address"  required/><br/>
+            <label>Email: </label><input id="email" type="email"  required/><br/>
+            <button type="submit" value="Submit" onclick="myfunction()">Submit</button>
+            <button type="reset" value="Clear">Clear</button><br/>
+        </form>
+    </body>
+</html>
